@@ -1,0 +1,3 @@
+[submodule "software/mono"]
+	path = software/mono
+	url = https://github.com/zachdeibert/mono-docker.git
