@@ -33,6 +33,7 @@ docker run zachdeibert/container-name $DISPLAY $USER
     * `software/make/` - Contains all of the tools needed for building Docker images with Make
     * `software/mono/` - A version of the [Library `mono`](https://hub.docker.com/_/mono/) image with an updated OS
     * `software/mono+make/` - Contains all of the tools needed for building Mono projects with Make
+    * `software/nsis/` - Contains the tools needed to build a NSIS installer
     * `software/typescript/` - Contains the typescript compiler
 
 ## [Need more software or other versions?](https://github.com/zachdeibert/docker-images/issues/new)
