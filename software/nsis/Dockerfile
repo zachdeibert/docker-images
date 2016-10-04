@@ -1,6 +1,6 @@
 FROM monokrome/wine
 
-RUN apt-get update && apt-get install -y nsis unzip && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y nsis unzip make && rm -rf /var/lib/apt/lists/*
 
 ADD http://nsis.sourceforge.net/mediawiki/images/c/c9/Inetc.zip /tmp/Inetc.zip
 ADD http://nsis.sourceforge.net/mediawiki/images/9/9d/Untgz.zip /tmp/Untgz.zip
