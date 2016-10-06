@@ -15,5 +15,3 @@ RUN cp /tmp/untgz/untgz.dll /usr/share/nsis/Plugins/
 RUN cp /tmp/NsUnzip/nsUnzip.dll /usr/share/nsis/Plugins/
 
 RUN rm -rf /tmp/{Inetc,Untgz,NsUnzip}{,.zip}
-
-ENTRYPOINT ["makensis"]
