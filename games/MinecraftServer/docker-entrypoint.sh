@@ -19,13 +19,11 @@ if [ ! -f server.properties ]; then
     touch server.properties
 fi
 
-for row in $( (env; echo "$@") | grep "^MC_" | grep -v "^MC_VERSION=" | tr "A-Z" "a-z" | tr _ - | sed -e "s|^mc-||"); do
-    key="$(echo "$row" | cut -f 1 -d "=")"
+(env; echo "$@") | grep "^MC_" | grep -v "^MC_VERSION=" | sed -e "s|^MC_||" | while read row; do
+    key="$(echo "$row" | cut -f 1 -d "=" | tr "A-Z" "a-z" | tr _ -)"
     grep -v "^$key=" server.properties > server.properties~ || true
-    echo "$row" >> server.properties~
+    echo "$key=$(echo "$row" | cut -f 2 -d "=")" >> server.properties~
     mv server.properties~ server.properties
 done
-
-cat server.properties
 
 exec java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar "minecraft_server.$MC_VERSION.jar" nogui
