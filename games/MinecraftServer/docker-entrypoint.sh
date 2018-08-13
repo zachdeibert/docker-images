@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ex
+set -e
 
 if [ ! -f "minecraft_server.$MC_VERSION.jar" ]; then
     row=$(grep "^$MC_VERSION " /opt/mc/list || true)
