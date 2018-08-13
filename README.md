@@ -22,6 +22,7 @@ docker run zachdeibert/container-name $DISPLAY $USER
     * `IDEs/QtCreator/` - The [QT Creator IDE](https://www.qt.io/ide/) for C++
 * `games/` - These are games (needs to run with GUI and are slower due to an OpenGL problem)
     * `games/Technic/` - The [Technic Launcher](http://www.technicpack.net/)
+    * `games/MinecraftServer/` - [Minecraft](https://minecraft.net) server in a container
 * `software/` - Other development software (CLI only)
     * `software/autotools/` - Contains all of the autotools programs (`autoconf`, `automake`, `libtool`, etc.)
     * `software/debian+mono-dev/` - Contains the tools needed to build mono programs and package Debian packages (`.deb`s)
