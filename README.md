@@ -34,6 +34,7 @@ docker run zachdeibert/container-name $DISPLAY $USER
     * `software/make/` - Contains all of the tools needed for building Docker images with Make
     * `software/mono/` - A version of the [Library `mono`](https://hub.docker.com/_/mono/) image with an updated OS
     * `software/mono+make/` - Contains all of the tools needed for building Mono projects with Make
+    * `software/ngx_http_proxy_connect_module` - Contains a version of Nginx with the [ngx_http_proxy_connect_module](https://github.com/chobits/ngx_http_proxy_connect_module) installed
     * `software/nsis/` - Contains the tools needed to build a NSIS installer
     * `software/typescript/` - Contains the typescript compiler
 
