@@ -16,7 +16,7 @@ RUN apt update \
     && curl -L https://github.com/chobits/ngx_http_proxy_connect_module/archive/master.tar.gz | tar xz \
     && cd nginx-1.15.2 \
     && patch -p1 < ../ngx_http_proxy_connect_module-master/patch/proxy_connect_rewrite_1015.patch \
-    && ./configure --add-module=../ngx_http_proxy_connect_module-master \
+    && ./configure --add-module=../ngx_http_proxy_connect_module-master --with-http_ssl_module \
     && make \
     && make install \
     && cd .. \
