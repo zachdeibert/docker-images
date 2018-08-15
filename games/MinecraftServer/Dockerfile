@@ -7,5 +7,5 @@ WORKDIR /opt/minecraft
 
 RUN apk add --no-cache curl
 
-COPY list /opt/mc/list
+COPY list /mc_list
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh

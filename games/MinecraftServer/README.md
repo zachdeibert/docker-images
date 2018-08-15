@@ -14,3 +14,15 @@ For example, this sets a level seed:
 ```bash
 docker run -ite MC_VERSION=1.13 -e MC_LEVEL_SEED=docker -p 25565:25565 zachdeibert/minecraft-server
 ```
+
+## Bukkit
+
+```bash
+docker run -ite MC_VERSION=1.13 -e MC_FLAVOR=bukkit -p 25565:25565 zachdeibert/minecraft-server
+```
+
+## Spigot
+
+```bash
+docker run -ite MC_VERSION=1.13 -e MC_FLAVOR=spigot -p 25565:25565 zachdeibert/minecraft-server
+```
