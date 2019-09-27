@@ -12,6 +12,13 @@ To run a GUI container on a remote X11 server, use the following:
 ```bash
 docker run zachdeibert/container-name $DISPLAY $USER
 ```
+The filesystem is completely different inside the container than outside the container.
+Therefore, when you recreate the container, all of the files will be deleted.
+To change this, you can use the `-v` option with the folder you want to be the same inside and outside.
+For example, the following command will make `/path/to/folder` the same inside and outside the container:
+```bash
+docker run -v /tmp:/tmp -v /path/to/folder:/path/to/folder zachdeibert/container-name $DISPLAY $USER
+```
 
 ## Repository Structure
 * `IDEs/` - These are IDEs that help with development (needs to run with GUI)
