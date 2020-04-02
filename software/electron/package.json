@@ -4,10 +4,7 @@
     "version": "1.0.0",
     "main": "main.js",
     "devDependencies": {
-        "electron-prebuilt": "^1.2.3"
-    },
-    "dependencies": {
-        "electron": "^0.4.1"
+        "electron": "^8.2.0"
     }
 }
 

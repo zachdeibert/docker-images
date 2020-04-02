@@ -1,4 +1,4 @@
-FROM zachdeibert/electron-docker:6.3.0
+FROM zachdeibert/electron:8.2.0
 
 MAINTAINER Zach Deibert<zachdeibert@gmail.com>
 
