@@ -13,6 +13,14 @@ case "$MC_FLAVOR" in
         server_fname="craftbukkit-$MC_VERSION.jar"
         server_url="https://cdn.getbukkit.org/craftbukkit/craftbukkit-$MC_VERSION.jar"
         ;;
+    "paper")
+        server_fname="paper-$MC_VERSION.jar"
+        if [ "x$PAPER_VERSION" = "x" ]; then
+            server_url="https://papermc.io/api/v1/paper/$MC_VERSION/latest/download"
+        else
+            server_url="https://papermc.io/api/v1/paper/$MC_VERSION/$PAPER_VERSION/download"
+        fi
+        ;;
     "")
         server_fname="minecraft_server.$MC_VERSION.jar"
         server_url="$(grep "^$MC_VERSION " /mc_list | cut -f 2 -d " ")"
@@ -46,4 +54,4 @@ fi
     mv server.properties~ server.properties
 done
 
-exec java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar "$server_fname" nogui
+exec java -XX:+UnlockExperimentalVMOptions -XX:+UseContainerSupport -XX:MaxRAMPercentage=90.0 -XX:MinRAMPercentage=50.0 -XX:+UseParallelGC -jar "$server_fname" nogui
