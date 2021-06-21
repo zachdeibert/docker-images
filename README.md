@@ -20,6 +20,12 @@ For example, the following command will make `/path/to/folder` the same inside a
 docker run -v /tmp:/tmp -v /path/to/folder:/path/to/folder zachdeibert/container-name $DISPLAY $USER
 ```
 
+### With Nvidia Graphics Cards
+To run a GUI container with a Nvidia graphics card, additionally add the following flags before the container name:
+```
+--device /dev/nvidia0 --device /dev/nvidiactl
+```
+
 ## Repository Structure
 * `IDEs/` - These are IDEs that help with development (needs to run with GUI)
     * `IDEs/AndroidStudio/` - The [Android Studio](https://developer.android.com/studio/index.html) IDE

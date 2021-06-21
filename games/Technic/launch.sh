@@ -15,7 +15,7 @@ if [ $# -eq 2 ]; then
 	if [ ! -d "/home/$2" ]; then
 		mkdir -p "/home/$2"
 	fi
-	chown "$2:$2" "/home/$2" "/home/$2/*"
+	chown -R "$2:$2" "/home/$2"
 	DISPLAY="$1" su "$2" -c "$executable"
 else
 	DISPLAY="$1" $executable
