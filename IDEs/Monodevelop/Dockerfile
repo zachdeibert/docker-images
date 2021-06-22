@@ -1,6 +1,6 @@
 FROM mono
 
-MAINTAINER Zach Deibert<zachdeibert@gmail.com>
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
 
 ENTRYPOINT ["/launch.sh"]
 CMD [":0"]

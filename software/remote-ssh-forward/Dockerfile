@@ -1,5 +1,7 @@
 FROM debian
 
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
+
 ENTRYPOINT [ "ssh", "-N", "-R" ]
 VOLUME /home/ssh/.ssh
 

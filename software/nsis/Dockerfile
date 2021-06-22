@@ -1,5 +1,7 @@
 FROM monokrome/wine
 
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
+
 RUN apt-get update && apt-get install -y nsis unzip make && rm -rf /var/lib/apt/lists/*
 
 ADD http://nsis.sourceforge.net/mediawiki/images/c/c9/Inetc.zip /tmp/Inetc.zip

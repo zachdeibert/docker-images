@@ -1,6 +1,6 @@
 FROM node
 
-MAINTAINER Zach Deibert<zachdeibert@gmail.com>
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
 
 ENV PATH $PATH:/usr/lib/node_modules/bin
 RUN npm install -g typescript typings

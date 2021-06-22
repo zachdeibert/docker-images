@@ -1,6 +1,6 @@
 FROM node:13.12.0-slim
 
-MAINTAINER Zach Deibert<zachdeibert@gmail.com>
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
 
 RUN apt-get update && apt-get install -y wine zip && rm -rf /var/lib/apt/cache/*
 RUN npm install electron-packager electron -g --unsafe-perm=true --allow-root

@@ -1,5 +1,5 @@
 FROM debian:jessie
 
-MAINTAINER Zach Deibert<zachdeibert@gmail.com>
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
 
 RUN apt-get update && apt-get install -y devscripts unar && rm -rf /var/lib/apt/cache/*

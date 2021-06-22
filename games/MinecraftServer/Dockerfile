@@ -1,5 +1,7 @@
 FROM openjdk:8-jre-alpine
 
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
+
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 EXPOSE 25565
 VOLUME /opt/minecraft

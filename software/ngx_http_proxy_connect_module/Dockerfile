@@ -1,5 +1,7 @@
 FROM debian:stretch-slim
 
+LABEL org.opencontainers.image.authors="zachdeibert@gmail.com"
+
 CMD [ "/usr/local/nginx/sbin/nginx", "-g", "daemon off;" ]
 EXPOSE 80
 STOPSIGNAL SIGTERM
